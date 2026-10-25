@@ -1,0 +1,76 @@
+/* Formatação global */
+
+* {
+    box-sizing: border-box;
+}
+
+/*Formatando o cabeçalho*/
+
+header {
+    background-color: #24213D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* Formatando a classe LOGO, para mudar apenas as propriedades da logo */
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/*Formatando o menu de navegação, dentro do header */
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Formatando os links presentes no menu de navegação*/
+
+nav a{
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Formatando o botão participe presente no cabeçalho */
+
+.botao-participe {
+    background-color: #E8BD70;
+    color: #24213D;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Formatando o corpo do site */
+
+body {
+    margin: 0; /*tirando a margem automática do navegador */
+}
+
+/* interação quando o mouse passa por cima do botão participe presente no cabeçalho*/
+
+.botao-participe:hover {
+    background-color: #F5D391;
+}
+
+/* regrinhas para telas menores */
+
+@media (max-width: 768px){
+     header {
+         flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
+         gap: 15px;
+         padding: 15px 20px; /* espaçamento diferente para telas menores */
+     }
+     nav {
+        justify-content: center;
+        flex-wrap: wrap; /*Deixa o menu de navegação com quebra de linha*/
+        gap: 15px;
+     }
+}
