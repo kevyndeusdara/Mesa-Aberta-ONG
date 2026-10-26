@@ -74,3 +74,48 @@ body {
         gap: 15px;
      }
 }
+
+/*Formatação da seção Slogan*/
+.slogan {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #24213D;
+
+    /*Colocando imagem ao fundo do slogan*/
+    
+    background-image:linear-gradient(to right, rgba(36, 33, 61, 0.95), rgba(36, 33, 61, 0.10)), url(../img/jogadores_banner.png);
+
+    /*Foi utilizado linear-gradient para a direita (to right) para definir uma cor inicial e uma cor final com efeito de transparência.*/
+
+    background-size: cover; /*faz a imagem preencher toda a seção*/ 
+    background-position: center; /*alinha a imagem no centro*/
+    min-height: 420px; 
+}
+
+.conteudo-slogan{
+    flex: 1;
+    max-width: 500px;
+}
+
+/*Formatando o título do slogan*/
+.conteudo-slogan h1 {
+    color: #E8BD70;
+    font-size: 48px;
+}
+
+/*Formatando os parágrafos do slogan*/
+.frase-slogan {
+    font-size: 25px;
+    font-weight: 500;
+    color: #F7F3EA;
+}
+
+.conteudo-slogan{
+    color: #F7F3EA;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 550;
+    margin-bottom: 25px;
+}
