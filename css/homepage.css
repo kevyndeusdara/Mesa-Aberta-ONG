@@ -43,6 +43,10 @@ nav a{
     font-size: 16px;
 }
 
+nav a:hover{
+    color: #E8BD70;
+}
+
 /* Formatando o botão participe presente no cabeçalho */
 
 .botao-participe {
@@ -92,6 +96,10 @@ body {
 .conteudo-slogan h1 {
     color: #E8BD70;
     font-size: 48px;
+    font-family: 'Times New Roman';
+}
+
+.conteudo-slogan p{
     font-family: 'Times New Roman';
 }
 
