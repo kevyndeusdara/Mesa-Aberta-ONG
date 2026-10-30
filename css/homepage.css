@@ -58,6 +58,7 @@ nav a{
 
 body {
     margin: 0; /*tirando a margem automática do navegador */
+    font-family: Arial, sans-serif;
 }
 
 /* interação quando o mouse passa por cima do botão participe presente no cabeçalho*/
@@ -91,6 +92,7 @@ body {
 .conteudo-slogan h1 {
     color: #E8BD70;
     font-size: 48px;
+    font-family: 'Times New Roman';
 }
 
 /*Formatando os parágrafos do slogan*/
@@ -98,6 +100,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     color: #F7F3EA;
+    font-family: 'Times New Roman';
 }
 
 /*Formatando a div que contém todo o conteúdo do slogan */

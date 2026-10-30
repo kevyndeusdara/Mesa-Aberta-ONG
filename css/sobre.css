@@ -11,7 +11,7 @@ body {
     color: #24213D;
 }
 
-nav a {
+nav a{
     color: #F7F3EA;
     text-decoration: none;
     font-size: 16px;
@@ -32,110 +32,6 @@ nav a {
     background-color: #F5D391;
 }
 
-/* ---------------- Responsividade ---------------- */
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .nossa-historia {
-        padding: 40px 20px;
-    }
-
-    .conteudo-historia {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .texto-historia h2 {
-        font-size: 30px;
-    }
-
-    .imagem-historia {
-        width: 100%;
-    }
-
-    .imagem-historia img {
-        height: 250px;
-    }
-    .nossos-principios {
-    padding: 40px 20px;
-    }
-
-    .cards-principios {
-    flex-direction: column;
-    }
-
-    .poder-rpg {
-        padding: 40px 20px;
-    }
-
-    .conteudo-rpg {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .imagem-rpg {
-        width: 100%;
-    }
-
-    .imagem-rpg img {
-        height: 250px;
-    }
-
-    .texto-rpg h2 {
-        font-size: 30px;
-    }
-    .banner-sobre {
-    padding: 40px 20px;
-    min-height: 350px;
-    }
-
-    .conteudo-banner h1 {
-    font-size: 36px;
-    }
-
-    .conteudo-banner p {
-        font-size: 20px;
-    }
-
-    .convite-participar {
-    padding: 50px 20px;
-    }
-
-    .conteudo-convite h2 {
-        font-size: 28px;
-    }
-
-    .conteudo-convite p {
-        font-size: 16px;
-    }
-
-    /* Rodapé no celular */
-
-    .rodape {
-        padding: 40px 20px 0;
-    }
-
-    .conteudo-rodape {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .rodape .rodape-links {
-        align-items: flex-start;
-    }
-
-}
 
 header {
     background-color: #24213D;
@@ -143,6 +39,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: solid #1b1a30;
 }
 
 .logo {
@@ -452,7 +352,7 @@ nav {
 
 /* Parte inferior */
 .rodape-inferior {
-    border-top: 1px solid #R14B69;
+    border-top: 1px solid #7757A8;
     text-align: center;
     padding: 20px 0;
 }
@@ -461,4 +361,109 @@ nav {
     color: #C6C0D3;
     font-size: 13px;
     margin: 0;
+}
+
+/* ---------------- Responsividade ---------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nossa-historia {
+        padding: 40px 20px;
+    }
+
+    .conteudo-historia {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .texto-historia h2 {
+        font-size: 30px;
+    }
+
+    .imagem-historia {
+        width: 100%;
+    }
+
+    .imagem-historia img {
+        height: 250px;
+    }
+    .nossos-principios {
+    padding: 40px 20px;
+    }
+
+    .cards-principios {
+    flex-direction: column;
+    }
+
+    .poder-rpg {
+        padding: 40px 20px;
+    }
+
+    .conteudo-rpg {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .imagem-rpg {
+        width: 100%;
+    }
+
+    .imagem-rpg img {
+        height: 250px;
+    }
+
+    .texto-rpg h2 {
+        font-size: 30px;
+    }
+    .banner-sobre {
+    padding: 40px 20px;
+    min-height: 350px;
+    }
+
+    .conteudo-banner h1 {
+    font-size: 36px;
+    }
+
+    .conteudo-banner p {
+        font-size: 20px;
+    }
+
+    .convite-participar {
+    padding: 50px 20px;
+    }
+
+    .conteudo-convite h2 {
+        font-size: 28px;
+    }
+
+    .conteudo-convite p {
+        font-size: 16px;
+    }
+
+    /* Rodapé no celular */
+
+    .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
+    }
+
 }
