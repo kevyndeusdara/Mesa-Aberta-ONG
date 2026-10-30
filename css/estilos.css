@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* --------------------------- Cabeçalho ---------------------------*/
+
 /*Formatando o cabeçalho*/
 
 header {
@@ -60,20 +62,7 @@ body {
     background-color: #F5D391;
 }
 
-/* regrinhas para telas menores */
-
-@media (max-width: 768px){
-     header {
-         flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
-         gap: 15px;
-         padding: 15px 20px; /* espaçamento diferente para telas menores */
-     }
-     nav {
-        justify-content: center;
-        flex-wrap: wrap; /*Deixa o menu de navegação com quebra de linha*/
-        gap: 15px;
-     }
-}
+/* --------------------------- Seção Slogan ---------------------------*/
 
 /*Formatação da seção Slogan*/
 .slogan {
@@ -94,11 +83,6 @@ body {
     min-height: 420px; 
 }
 
-.conteudo-slogan{
-    flex: 1;
-    max-width: 500px;
-}
-
 /*Formatando o título do slogan*/
 .conteudo-slogan h1 {
     color: #E8BD70;
@@ -112,10 +96,79 @@ body {
     color: #F7F3EA;
 }
 
+/*Formatando a div que contém todo o conteúdo do slogan */
 .conteudo-slogan{
     color: #F7F3EA;
     line-height: 1.6;
     font-size: 15px;
-    font-weight: 550;
+    font-weight: 500;
     margin-bottom: 25px;
+    max-width: 500px;
+    flex: 1;
+}
+
+/*Formatação do contêiner que possui os 2 botões na seção slogan*/
+.botoes-slogan{
+    display: flex;
+    gap: 15px;
+}
+
+/*Formatação dos dois botões presentes no contêner slogan */
+
+.botao-projetos{
+    background-color: #7757A8;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.botao-quero-participar{
+    text-decoration: none;
+    color: #E8BD70;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8BD70;
+}
+
+.botao-projetos:hover{
+    background-color: #62488a;
+}
+
+.botao-quero-participar:hover{
+    border: 1px solid #ad8d53;
+    color: #ad8d53;
+}
+
+/* --------------------------- Seção Quem somos ---------------------------*/
+
+
+
+
+
+/* ------------------------- Regras para mobile -------------------------*/
+
+@media (max-width: 768px){
+     header {
+         flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
+         gap: 15px;
+         padding: 15px 20px; /* espaçamento diferente para telas menores */
+     }
+     nav {
+        justify-content: center;
+        flex-wrap: wrap; /*Deixa o menu de navegação com quebra de linha*/
+        gap: 15px;
+     }
+     .slogan{
+        padding: 40px 20px;
+        background-position: 60% center;
+     }
+     .botoes-slogan{
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+     }
+     .conteudo-slogan h1{
+        font-size: 36px;
+     }
 }
