@@ -14,6 +14,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: solid #1b1a30;
 }
 
 /* Formatando a classe LOGO, para mudar apenas as propriedades da logo */
@@ -142,7 +146,72 @@ body {
 
 /* --------------------------- Seção Quem somos ---------------------------*/
 
+/*Formatando a seção "quem somos" inteira */
+.quem-somos{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #F7F3EA;
+}
 
+/*contêiner "apresentação*/
+.apresentacao-ong{
+    flex: 1;
+}
+
+/*Título do contêiner*/
+.apresentacao-ong h2{
+    color: #24213D;
+    font-size: 36px;
+    margin-bottom: 	20px;
+}
+
+/*páragrafo do contêiner*/
+.apresentacao-ong p{
+    color: #24213d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*contêiner "valores"*/
+.valores-ong{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.valores-ong article{
+    flex: 1;
+}
+
+.botao-sobre {
+    color: #24213D;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #24213D;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.valores-ong h3{
+    color: #24213D;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.valores-ong p {
+    color: #4a4558;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.botao-sobre:hover{
+    background-color: #cfccc6;
+}
 
 
 
