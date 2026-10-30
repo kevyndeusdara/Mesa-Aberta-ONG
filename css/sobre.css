@@ -1,0 +1,464 @@
+/* Formatação global */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F3EA;
+    color: #24213D;
+}
+
+nav a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Botão Participe */
+
+.botao-participe {
+    background-color: #E8BD70;
+    color: #24213D;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-participe:hover {
+    background-color: #F5D391;
+}
+
+/* ---------------- Responsividade ---------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nossa-historia {
+        padding: 40px 20px;
+    }
+
+    .conteudo-historia {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .texto-historia h2 {
+        font-size: 30px;
+    }
+
+    .imagem-historia {
+        width: 100%;
+    }
+
+    .imagem-historia img {
+        height: 250px;
+    }
+    .nossos-principios {
+    padding: 40px 20px;
+    }
+
+    .cards-principios {
+    flex-direction: column;
+    }
+
+    .poder-rpg {
+        padding: 40px 20px;
+    }
+
+    .conteudo-rpg {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .imagem-rpg {
+        width: 100%;
+    }
+
+    .imagem-rpg img {
+        height: 250px;
+    }
+
+    .texto-rpg h2 {
+        font-size: 30px;
+    }
+    .banner-sobre {
+    padding: 40px 20px;
+    min-height: 350px;
+    }
+
+    .conteudo-banner h1 {
+    font-size: 36px;
+    }
+
+    .conteudo-banner p {
+        font-size: 20px;
+    }
+
+    .convite-participar {
+    padding: 50px 20px;
+    }
+
+    .conteudo-convite h2 {
+        font-size: 28px;
+    }
+
+    .conteudo-convite p {
+        font-size: 16px;
+    }
+
+    /* Rodapé no celular */
+
+    .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
+    }
+
+}
+
+header {
+    background-color: #24213D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/* ---------------- Banner Sobre ---------------- */
+
+.banner-sobre {
+    background-color: #24213D;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(36, 33, 61, 0.95),
+            rgba(36, 33, 61, 0.10)
+        ),
+        url("../img/sobre_rpg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 420px;
+    padding: 60px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Conteúdo do banner */
+
+.conteudo-banner {
+    max-width: 500px;
+    margin: 0;
+    color: #F7F3EA;
+}
+
+.conteudo-banner h1 {
+    font-family: "Times New Roman", Times, serif;
+    color: #E8BD70;
+    font-size: 48px;
+}
+
+/* Frase de apresentação */
+
+.conteudo-banner p {
+    font-family: "Times New Roman", Times, serif;
+    color: #F7F3EA;
+    font-size: 15px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* ---------------- Nossa História ---------------- */
+
+.nossa-historia {
+    background-color: #F7F3EA;
+    padding: 80px 40px;
+}
+
+/* Organiza texto e imagem lado a lado */
+.conteudo-historia {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Parte esquerda */
+.texto-historia {
+    flex: 1;
+}
+
+.texto-historia h2 {
+    color: #24213D;
+    font-size: 31px;
+    margin-bottom: 25px;
+}
+
+.texto-historia p {
+    color: #4A4558;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Parte direita */
+.imagem-historia {
+    flex: 1;
+}
+
+.imagem-historia img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ---------------- Nossos Princípios ---------------- */
+
+.nossos-principios {
+    background-color: #EEE9DF;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.nossos-principios h2 {
+    color: #24213D;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Contêiner dos cartões */
+.cards-principios {
+    display: flex;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Formatação de cada cartão */
+.card {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 5px solid #E8BD70;
+}
+
+.card h3 {
+    color: #24213D;
+    font-size: 24px;
+}
+
+.card p {
+    color: #4A4558;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ---------------- O Poder do RPG ---------------- */
+
+.poder-rpg {
+    background-color: #F7F3EA;
+    padding: 80px 40px;
+}
+
+/* Organiza imagem e texto */
+.conteudo-rpg {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Imagem */
+.imagem-rpg {
+    flex: 1;
+}
+
+.imagem-rpg img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Texto */
+.texto-rpg {
+    flex: 1;
+}
+
+.texto-rpg h2 {
+    color: #24213D;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.texto-rpg p {
+    color: #4A4558;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Lista de benefícios */
+.texto-rpg ul {
+    padding-left: 25px;
+}
+
+.texto-rpg li {
+    color: #24213D;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.texto-rpg li::marker {
+    color: #7757A8;
+}
+
+/* ---------------- Convite para Participar ---------------- */
+
+.convite-participar {
+    background-color: #24213D;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.conteudo-convite {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.conteudo-convite h2 {
+    color: #E8BD70;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.conteudo-convite p {
+    color: #F7F3EA;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.botao-convite {
+    display: inline-block;
+    background-color: #E8BD70;
+    color: #24213D;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-convite:hover {
+    background-color: #F5D391;
+}
+
+/* ---------------- Rodapé ---------------- */
+
+.rodape {
+    background-color: #1B1A30;
+    color: #F7F3EA;
+    padding: 50px 40px 0;
+}
+
+/* Conteúdo principal */
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* Identidade da ONG */
+.logo-rodape {
+    max-width: 180px;
+    height: auto;
+    background-color: #F7F3EA;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.rodape-identidade p {
+    color: #C6C0D3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Links de navegação */
+.rodape-navegacao h3 {
+    color: #E8BD70;
+    font-size: 20px;
+}
+
+.rodape .rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.rodape-links a:hover {
+    color: #E8BD70;
+}
+
+/* Parte inferior */
+.rodape-inferior {
+    border-top: 1px solid #R14B69;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape-inferior p {
+    color: #C6C0D3;
+    font-size: 13px;
+    margin: 0;
+}
