@@ -312,7 +312,7 @@ body {
 
 /* ------------------------- Regras para mobile -------------------------*/
 
-@media (max-width: 768px){
+@media (max-width: 760px){
      header {
          flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
          gap: 15px;
@@ -346,6 +346,19 @@ body {
         flex-direction: column;
         gap: 24px;
         align-items: stretch;
+    }
+
+     .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
     }
 
 }
