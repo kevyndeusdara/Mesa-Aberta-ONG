@@ -1,0 +1,307 @@
+/* Formatação global */
+
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------- Cabeçalho ---------------------------*/
+
+/*Formatando o cabeçalho*/
+
+header {
+    background-color: #24213D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+    border-bottom: solid #1b1a30;
+}
+
+/* Formatando a classe LOGO, para mudar apenas as propriedades da logo */
+
+.logo {
+    max-width: 160px;
+    height: auto;
+}
+
+/*Formatando o menu de navegação, dentro do header */
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Formatando os links presentes no menu de navegação*/
+
+nav a{
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover{
+    color: #E8BD70;
+}
+
+/* Formatando o botão participe presente no cabeçalho */
+
+.botao-participe {
+    background-color: #E8BD70;
+    color: #24213D;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/*Formatando o corpo do site */
+
+body {
+    margin: 0; /*tirando a margem automática do navegador */
+    font-family: Arial, sans-serif;
+}
+
+/* interação quando o mouse passa por cima do botão participe presente no cabeçalho*/
+
+.botao-participe:hover {
+    background-color: #F5D391;
+}
+
+/* --------------------------- Banner ---------------------------*/
+
+.banner-projetos {
+    background-color: #24213D;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(36, 33, 61, 0.95),
+        rgba(36, 33, 61, 0.10)
+    ), url("../img/banner_projetos.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 380px;
+    padding: 50px 32px;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-banner {
+    max-width: 550px;
+    color: #F7F3EA;
+    line-height: 1.6;
+}
+
+.conteudo-banner h1 {
+    color: #E8BD70;
+    font-size: 43px;
+    font-family: 'Times New Roman', serif;
+}
+
+.conteudo-banner p {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+/* --------------------------- Seções dos projetos ---------------------------*/
+
+.secao-projeto {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 32px;
+    background-color: #F7F3EA;
+}
+
+.secao-projeto img{
+    width: 45%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.conteudo-projeto {
+    flex: 1;
+    padding: 30px;
+}
+
+.conteudo-projeto h2{
+    color: #24213D;
+    font-size: 32px;
+}
+
+.conteudo-projeto p {
+    color: #4A4558;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.botao-projeto {
+    display: inline-block;
+    background-color: #7757A8;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-projeto:hover {
+    background-color: #614689;
+}
+
+/*Regra pra inverter formatação*/
+
+.projeto-invertido {
+    flex-direction: row-reverse;
+    background-color: #EEE9DF;
+}
+
+/*Linha divisória*/
+
+.divisoria-projetos {
+    border: none;
+    border-top: 2px solid #7757A8;
+    margin: 0;
+}
+
+/* ------------------------- Rodapé ------------------------ */
+
+.rodape {
+    background-color: #1B1A30;
+    color: #F7F3EA;
+    padding: 50px 40px 0;
+}
+
+/* Conteúdo principal */
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* Identidade da ONG */
+.logo-rodape {
+    max-width: 180px;
+    height: auto;
+    background-color: #F7F3EA;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.rodape-identidade p {
+    color: #C6C0D3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Links de navegação */
+.rodape-navegacao h3 {
+    color: #E8BD70;
+    font-size: 20px;
+}
+
+.rodape .rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.rodape-links a:hover {
+    color: #E8BD70;
+}
+
+/* Parte inferior */
+.rodape-inferior {
+    border-top: 1px solid #7757A8;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape-inferior p {
+    color: #C6C0D3;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ------------------------- Responsividade ------------------------ */
+
+@media (max-width: 768px){
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 8px 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .banner-projetos{
+        padding: 40px 20px;
+        min-height: 320px;
+        background-position: 65% center;
+    }
+
+    .conteudo-banner h1{
+        font-size: 36px;
+    }
+
+    .conteudo-banner p {
+        font-size: 16px;
+    }
+
+    /*formatação das seções*/
+
+    .secao-projeto{
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    .secao-projeto img{
+        width: 100%;
+        height: 240px;
+    }
+
+    .conteudo-projeto {
+    padding: 0;
+    }
+
+    .projeto-invertido {
+    flex-direction: column;
+    }
+
+    /* Rodapé no celular */
+    .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
+    }
+}
