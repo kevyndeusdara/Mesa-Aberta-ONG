@@ -167,6 +167,10 @@ body {
     background-color: #F7F3EA;
 }
 
+.quem-somos p{
+    padding: 12px;
+}
+
 /*contêiner "apresentação*/
 .apresentacao-ong{
     flex: 1;
@@ -225,6 +229,85 @@ body {
     background-color: #cfccc6;
 }
 
+/*Formatando as imagens dos artigos (articles)*/
+
+.valores-ong article img{
+    width: 62px;
+    height: 62px;
+    object-fit: contain; /*evita distorções*/
+    margin-bottom: 12px;
+}
+
+/* ---------------- Rodapé ---------------- */
+
+.rodape {
+    background-color: #1B1A30;
+    color: #F7F3EA;
+    padding: 50px 40px 0;
+}
+
+/* Conteúdo principal */
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* Identidade da ONG */
+.logo-rodape {
+    max-width: 180px;
+    height: auto;
+    background-color: #F7F3EA;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.rodape-identidade p {
+    color: #C6C0D3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Links de navegação */
+.rodape-navegacao h3 {
+    color: #E8BD70;
+    font-size: 20px;
+}
+
+.rodape .rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.rodape-links a:hover {
+    color: #E8BD70;
+}
+
+/* Parte inferior */
+.rodape-inferior {
+    border-top: 1px solid #7757A8;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape-inferior p {
+    color: #C6C0D3;
+    font-size: 13px;
+    margin: 0;
+}
 
 
 /* ------------------------- Regras para mobile -------------------------*/
@@ -252,4 +335,17 @@ body {
      .conteudo-slogan h1{
         font-size: 36px;
      }
+     .quem-somos {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: stretch;
+    }
+
+    .valores-ong{
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+
 }
