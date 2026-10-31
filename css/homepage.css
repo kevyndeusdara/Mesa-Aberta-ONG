@@ -312,7 +312,7 @@ body {
 
 /* ------------------------- Regras para mobile -------------------------*/
 
-@media (max-width: 760px){
+@media (max-width: 768px){
      header {
          flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
          gap: 15px;
