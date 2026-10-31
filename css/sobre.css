@@ -26,7 +26,7 @@ nav a:hover{
 .botao-participe {
     background-color: #E8BD70;
     color: #24213D;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -43,15 +43,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 8px 32px;
     border-bottom: solid #1b1a30;
 }
 
 .logo {
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
 }
 
@@ -72,8 +69,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 420px;
-    padding: 60px 40px;
+    min-height: 380px;
+    padding: 50px 32px;
 
     display: flex;
     align-items: center;
@@ -92,7 +89,7 @@ header {
 .conteudo-banner h1 {
     font-family: "Times New Roman", Times, serif;
     color: #E8BD70;
-    font-size: 48px;
+    font-size: 43px;
 }
 
 /* Frase de apresentação */
@@ -113,7 +110,7 @@ nav {
 
 .nossa-historia {
     background-color: #F7F3EA;
-    padding: 80px 40px;
+    padding: 70px 32px;
 }
 
 /* Organiza texto e imagem lado a lado */
@@ -149,7 +146,8 @@ nav {
 
 .imagem-historia img {
     width: 100%;
-    height: 350px;
+    max-width: 450px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -158,13 +156,13 @@ nav {
 
 .nossos-principios {
     background-color: #EEE9DF;
-    padding: 80px 40px;
+    padding: 70px 32px;
     text-align: center;
 }
 
 .nossos-principios h2 {
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 40px;
 }
 
@@ -180,7 +178,7 @@ nav {
 .card {
     flex: 1;
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 12px;
     border-top: 5px solid #E8BD70;
 }
@@ -200,7 +198,7 @@ nav {
 
 .poder-rpg {
     background-color: #F7F3EA;
-    padding: 80px 40px;
+    padding: 70px 32px;
 }
 
 /* Organiza imagem e texto */
@@ -231,7 +229,7 @@ nav {
 
 .texto-rpg h2 {
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 25px;
 }
 
@@ -260,7 +258,7 @@ nav {
 
 .convite-participar {
     background-color: #24213D;
-    padding: 80px 40px;
+    padding: 70px 32px;
     text-align: center;
 }
 
@@ -271,7 +269,7 @@ nav {
 
 .conteudo-convite h2 {
     color: #E8BD70;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
@@ -374,7 +372,7 @@ nav {
     header {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 20px;
+        padding: 8px 20px;
     }
 
     nav {

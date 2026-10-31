@@ -13,17 +13,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 8px 32px;
     border-bottom: solid #1b1a30;
 }
 
 /* Formatando a classe LOGO, para mudar apenas as propriedades da logo */
 
 .logo {
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
 }
 
@@ -52,7 +49,7 @@ nav a:hover{
 .botao-participe {
     background-color: #E8BD70;
     color: #24213D;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -79,7 +76,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 60px 40px;
+    padding: 50px 32px;
     background-color: #24213D;
 
     /*Colocando imagem ao fundo do slogan*/
@@ -90,13 +87,13 @@ body {
 
     background-size: cover; /*faz a imagem preencher toda a seção*/ 
     background-position: center; /*alinha a imagem no centro*/
-    min-height: 420px; 
+    min-height: 380px; 
 }
 
 /*Formatando o título do slogan*/
 .conteudo-slogan h1 {
     color: #E8BD70;
-    font-size: 48px;
+    font-size: 43px;
     font-family: 'Times New Roman';
 }
 
@@ -106,7 +103,7 @@ body {
 
 /*Formatando os parágrafos do slogan*/
 .frase-slogan {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     color: #F7F3EA;
     font-family: 'Times New Roman';
@@ -149,11 +146,13 @@ body {
 
 .botao-projetos:hover{
     background-color: #62488a;
+    transition: background-color 0.3s;
 }
 
 .botao-quero-participar:hover{
     border: 1px solid #ad8d53;
     color: #ad8d53;
+    transition: color 0.3s;
 }
 
 /* --------------------------- Seção Quem somos ---------------------------*/
@@ -163,7 +162,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 60px 40px;
+    padding: 50px 32px;
     background-color: #F7F3EA;
 }
 
@@ -179,7 +178,7 @@ body {
 /*Título do contêiner*/
 .apresentacao-ong h2{
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 	20px;
 }
 
@@ -227,6 +226,7 @@ body {
 
 .botao-sobre:hover{
     background-color: #cfccc6;
+    transition: background-color 0.3s;
 }
 
 /*Formatando as imagens dos artigos (articles)*/
@@ -236,6 +236,75 @@ body {
     height: 62px;
     object-fit: contain; /*evita distorções*/
     margin-bottom: 12px;
+}
+
+/* ----------------------- Seção nossos projetos -----------------------*/
+
+/*Formatção da seção Nossos projetos*/
+.nossos-projetos {
+    padding: 50px 32px;
+    background-color: #24213D;
+}
+
+/*Formatação do título*/
+.nossos-projetos h2{
+    color: #F7F3EA;
+    font-size: 32px;
+}
+
+/*Parágrafo após o título*/
+.nossos-projetos p{
+    color: #F7F3EA;
+}
+
+/*Div contendo os cards*/
+.cards-projetos{
+    display: flex;
+    gap: 20px;
+}
+
+/*Título dos cards*/
+.cards-projetos h3{
+    color: #24213D;
+}
+
+/*Texto dos cards*/
+.cards-projetos p{
+    color: #4a4558;
+}
+
+/*Cards em si*/
+.cards-projetos article{
+    flex: 1;
+    background-color: #F7F3EA;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/*Links presentes nos cards*/
+.link-projeto{
+    color: #7757A8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*interação com os links*/
+.link-projeto:hover {
+    color: #4c376a;
+    transition: color 0.3s;
+}
+
+/*Imagens presentes nos cards*/
+.cards-projetos article img {
+    width: 100%; /*Ocupa o espaço inteiro do card*/
+    height: 180px; /*Padroniza a altura*/
+    object-fit: cover; /*Preenche a área evitando distorção*/
+    display: block;
+}
+
+/*Todo o conteúdo dentro do card, fora a imagem*/
+.conteudo-card {
+    padding: 22px;
 }
 
 /* ---------------- Rodapé ---------------- */
@@ -316,7 +385,7 @@ body {
      header {
          flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
          gap: 15px;
-         padding: 15px 20px; /* espaçamento diferente para telas menores */
+         padding: 8px 20px; /* espaçamento diferente para telas menores */
      }
      nav {
         justify-content: center;
