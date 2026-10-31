@@ -432,6 +432,7 @@ nav {
     .banner-sobre {
     padding: 40px 20px;
     min-height: 350px;
+    background-position: 70% center;
     }
 
     .conteudo-banner h1 {
