@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/*Linha divisória*/
+
+.divisoria {
+    border: none;
+    border-top: 2px solid #7757A8;
+    margin: 0;
+}
+
 /* --------------------------- Cabeçalho ---------------------------*/
 
 /*Formatando o cabeçalho*/
@@ -13,17 +21,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 8px 32px;
     border-bottom: solid #1b1a30;
 }
 
 /* Formatando a classe LOGO, para mudar apenas as propriedades da logo */
 
 .logo {
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
 }
 
@@ -43,21 +48,27 @@ nav a{
     font-size: 16px;
 }
 
+nav a:hover{
+    color: #E8BD70;
+}
+
 /* Formatando o botão participe presente no cabeçalho */
 
 .botao-participe {
     background-color: #E8BD70;
     color: #24213D;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 /*Formatando o corpo do site */
 
 body {
     margin: 0; /*tirando a margem automática do navegador */
+    font-family: Arial, sans-serif;
 }
 
 /* interação quando o mouse passa por cima do botão participe presente no cabeçalho*/
@@ -73,7 +84,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 60px 40px;
+    padding: 50px 32px;
     background-color: #24213D;
 
     /*Colocando imagem ao fundo do slogan*/
@@ -84,20 +95,26 @@ body {
 
     background-size: cover; /*faz a imagem preencher toda a seção*/ 
     background-position: center; /*alinha a imagem no centro*/
-    min-height: 420px; 
+    min-height: 380px; 
 }
 
 /*Formatando o título do slogan*/
 .conteudo-slogan h1 {
     color: #E8BD70;
-    font-size: 48px;
+    font-size: 43px;
+    font-family: 'Times New Roman';
+}
+
+.conteudo-slogan p{
+    font-family: 'Times New Roman';
 }
 
 /*Formatando os parágrafos do slogan*/
 .frase-slogan {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     color: #F7F3EA;
+    font-family: 'Times New Roman';
 }
 
 /*Formatando a div que contém todo o conteúdo do slogan */
@@ -125,6 +142,7 @@ body {
     color: white;
     padding: 8px 16px;
     border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .botao-quero-participar{
@@ -133,6 +151,7 @@ body {
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid #E8BD70;
+    transition: color 0.3s;
 }
 
 .botao-projetos:hover{
@@ -151,8 +170,12 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 60px 40px;
+    padding: 50px 32px;
     background-color: #F7F3EA;
+}
+
+.quem-somos p{
+    padding: 12px;
 }
 
 /*contêiner "apresentação*/
@@ -163,7 +186,7 @@ body {
 /*Título do contêiner*/
 .apresentacao-ong h2{
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 	20px;
 }
 
@@ -195,6 +218,7 @@ body {
     border-radius: 8px;
     padding: 8px;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .valores-ong h3{
@@ -211,8 +235,245 @@ body {
 
 .botao-sobre:hover{
     background-color: #cfccc6;
+    
 }
 
+/*Formatando as imagens dos artigos (articles)*/
+
+.valores-ong article img{
+    width: 62px;
+    height: 62px;
+    object-fit: contain; /*evita distorções*/
+    margin-bottom: 12px;
+}
+
+/* ----------------------- Seção nossos projetos -----------------------*/
+
+/*Formatção da seção Nossos projetos*/
+.nossos-projetos {
+    padding: 50px 32px;
+    background-color: #EEE9DF;
+}
+
+/*Formatação do título*/
+.nossos-projetos h2{
+    color: #24213D;
+    font-size: 32px;
+}
+
+.nossos-projetos p {
+    padding: 10px 1px;
+}
+
+/*Div contendo os cards*/
+.cards-projetos{
+    display: flex;
+    gap: 20px;
+}
+
+/*Título dos cards*/
+.cards-projetos h3{
+    color: #24213D;
+}
+
+/*Texto dos cards*/
+.cards-projetos p{
+    color: #4a4558;
+}
+
+/*Cards em si*/
+.cards-projetos article{
+    flex: 1;
+    background-color: #F7F3EA;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #24213D;
+}
+
+/*Links presentes nos cards*/
+.link-projeto{
+    color: #7757A8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/*interação com os links*/
+.link-projeto:hover {
+    color: #4c376a;
+}
+
+/*Imagens presentes nos cards*/
+.cards-projetos article img {
+    width: 100%; /*Ocupa o espaço inteiro do card*/
+    height: 180px; /*Padroniza a altura*/
+    object-fit: cover; /*Preenche a área evitando distorção*/
+    display: block;
+}
+
+/*Todo o conteúdo dentro do card, fora a imagem*/
+.conteudo-card {
+    padding: 22px;
+}
+
+/* ----------------------- Seção Por que importa -----------------------*/
+
+.por-que-importa{
+    background-color:#F7F3EA;
+    padding: 50px 32px;
+    color: #24213D;
+}
+
+.por-que-importa h2{
+    font-size: 32px;
+    color: #24213D;
+}
+
+.beneficios {
+    display: flex;
+    gap: 20px;
+}
+
+.beneficios h3 {
+    font-size: 18px;
+    color: #24213D;
+}
+
+.beneficios p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4a4558;
+}
+
+.beneficios article{
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: solid 2px #24213D;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.beneficios article img{
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0; /*Impede que o flexbox encolha a área do ícone*/
+}
+
+/* ---------------- Convite para Participar ---------------- */
+
+.convite-participar {
+    background-color: #24213D;
+    padding: 70px 32px;
+    text-align: center;
+}
+
+.conteudo-convite {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.conteudo-convite h2 {
+    color: #E8BD70;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.conteudo-convite p {
+    color: #F7F3EA;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.botao-convite {
+    display: inline-block;
+    background-color: #E8BD70;
+    color: #24213D;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-convite:hover {
+    background-color: #F5D391;
+}
+
+
+/* ------------------------- Rodapé ------------------------ */
+
+.rodape {
+    background-color: #1B1A30;
+    color: #F7F3EA;
+    padding: 50px 40px 0;
+}
+
+/* Conteúdo principal */
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* Identidade da ONG */
+.logo-rodape {
+    max-width: 180px;
+    height: auto;
+    background-color: #F7F3EA;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.rodape-identidade p {
+    color: #C6C0D3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Links de navegação */
+.rodape-navegacao h3 {
+    color: #E8BD70;
+    font-size: 20px;
+}
+
+.rodape .rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.rodape-links a:hover {
+    color: #E8BD70;
+}
+
+/* Parte inferior */
+.rodape-inferior {
+    border-top: 1px solid #7757A8;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape-inferior p {
+    color: #C6C0D3;
+    font-size: 13px;
+    margin: 0;
+}
 
 
 /* ------------------------- Regras para mobile -------------------------*/
@@ -221,7 +482,7 @@ body {
      header {
          flex-direction: column; /*Deixa o conteúdo do cabeçalho em coluna */
          gap: 15px;
-         padding: 15px 20px; /* espaçamento diferente para telas menores */
+         padding: 8px 20px; /* espaçamento diferente para telas menores */
      }
      nav {
         justify-content: center;
@@ -230,7 +491,7 @@ body {
      }
      .slogan{
         padding: 40px 20px;
-        background-position: 60% center;
+        background-position: 75% center;
      }
      .botoes-slogan{
         flex-direction: column;
@@ -240,4 +501,57 @@ body {
      .conteudo-slogan h1{
         font-size: 36px;
      }
+     .quem-somos {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: stretch;
+    }
+
+    .valores-ong{
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .cards-projetos{
+        flex-direction: column;
+    }
+
+    .nossos-projetos {
+        padding: 40px 20px;
+    }
+
+    .beneficios {
+    flex-direction: column;
+    }
+
+    .por-que-importa{
+        padding: 40px 20px;
+    }
+
+     .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
+    }
+    .convite-participar {
+    padding: 50px 20px;
+    }
+
+    .conteudo-convite h2 {
+        font-size: 28px;
+    }
+
+    .conteudo-convite p {
+        font-size: 16px;
+    }
+
 }

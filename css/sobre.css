@@ -11,10 +11,14 @@ body {
     color: #24213D;
 }
 
-nav a {
+nav a{
     color: #F7F3EA;
     text-decoration: none;
     font-size: 16px;
+}
+
+nav a:hover{
+    color: #E8BD70;
 }
 
 /* Botão Participe */
@@ -22,131 +26,29 @@ nav a {
 .botao-participe {
     background-color: #E8BD70;
     color: #24213D;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .botao-participe:hover {
     background-color: #F5D391;
 }
 
-/* ---------------- Responsividade ---------------- */
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .nossa-historia {
-        padding: 40px 20px;
-    }
-
-    .conteudo-historia {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .texto-historia h2 {
-        font-size: 30px;
-    }
-
-    .imagem-historia {
-        width: 100%;
-    }
-
-    .imagem-historia img {
-        height: 250px;
-    }
-    .nossos-principios {
-    padding: 40px 20px;
-    }
-
-    .cards-principios {
-    flex-direction: column;
-    }
-
-    .poder-rpg {
-        padding: 40px 20px;
-    }
-
-    .conteudo-rpg {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .imagem-rpg {
-        width: 100%;
-    }
-
-    .imagem-rpg img {
-        height: 250px;
-    }
-
-    .texto-rpg h2 {
-        font-size: 30px;
-    }
-    .banner-sobre {
-    padding: 40px 20px;
-    min-height: 350px;
-    }
-
-    .conteudo-banner h1 {
-    font-size: 36px;
-    }
-
-    .conteudo-banner p {
-        font-size: 20px;
-    }
-
-    .convite-participar {
-    padding: 50px 20px;
-    }
-
-    .conteudo-convite h2 {
-        font-size: 28px;
-    }
-
-    .conteudo-convite p {
-        font-size: 16px;
-    }
-
-    /* Rodapé no celular */
-
-    .rodape {
-        padding: 40px 20px 0;
-    }
-
-    .conteudo-rodape {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .rodape .rodape-links {
-        align-items: flex-start;
-    }
-
-}
 
 header {
     background-color: #24213D;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 8px 32px;
+    border-bottom: solid #1b1a30;
 }
 
 .logo {
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
 }
 
@@ -167,8 +69,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 420px;
-    padding: 60px 40px;
+    min-height: 380px;
+    padding: 50px 32px;
 
     display: flex;
     align-items: center;
@@ -187,7 +89,7 @@ header {
 .conteudo-banner h1 {
     font-family: "Times New Roman", Times, serif;
     color: #E8BD70;
-    font-size: 48px;
+    font-size: 43px;
 }
 
 /* Frase de apresentação */
@@ -208,7 +110,7 @@ nav {
 
 .nossa-historia {
     background-color: #F7F3EA;
-    padding: 80px 40px;
+    padding: 70px 32px;
 }
 
 /* Organiza texto e imagem lado a lado */
@@ -244,7 +146,8 @@ nav {
 
 .imagem-historia img {
     width: 100%;
-    height: 350px;
+    max-width: 450px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -253,13 +156,13 @@ nav {
 
 .nossos-principios {
     background-color: #EEE9DF;
-    padding: 80px 40px;
+    padding: 70px 32px;
     text-align: center;
 }
 
 .nossos-principios h2 {
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 40px;
 }
 
@@ -275,7 +178,7 @@ nav {
 .card {
     flex: 1;
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 12px;
     border-top: 5px solid #E8BD70;
 }
@@ -295,7 +198,7 @@ nav {
 
 .poder-rpg {
     background-color: #F7F3EA;
-    padding: 80px 40px;
+    padding: 70px 32px;
 }
 
 /* Organiza imagem e texto */
@@ -326,7 +229,7 @@ nav {
 
 .texto-rpg h2 {
     color: #24213D;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 25px;
 }
 
@@ -351,11 +254,19 @@ nav {
     color: #7757A8;
 }
 
+/*Linha divisória*/
+
+.divisoria {
+    border: none;
+    border-top: 2px solid #7757A8;
+    margin: 0;
+}
+
 /* ---------------- Convite para Participar ---------------- */
 
 .convite-participar {
     background-color: #24213D;
-    padding: 80px 40px;
+    padding: 70px 32px;
     text-align: center;
 }
 
@@ -366,7 +277,7 @@ nav {
 
 .conteudo-convite h2 {
     color: #E8BD70;
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
@@ -452,7 +363,7 @@ nav {
 
 /* Parte inferior */
 .rodape-inferior {
-    border-top: 1px solid #514B69;
+    border-top: 1px solid #7757A8;
     text-align: center;
     padding: 20px 0;
 }
@@ -461,4 +372,110 @@ nav {
     color: #C6C0D3;
     font-size: 13px;
     margin: 0;
+}
+
+/* ---------------- Responsividade ---------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 8px 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nossa-historia {
+        padding: 40px 20px;
+    }
+
+    .conteudo-historia {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .texto-historia h2 {
+        font-size: 30px;
+    }
+
+    .imagem-historia {
+        width: 100%;
+    }
+
+    .imagem-historia img {
+        height: 250px;
+    }
+    .nossos-principios {
+    padding: 40px 20px;
+    }
+
+    .cards-principios {
+    flex-direction: column;
+    }
+
+    .poder-rpg {
+        padding: 40px 20px;
+    }
+
+    .conteudo-rpg {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .imagem-rpg {
+        width: 100%;
+    }
+
+    .imagem-rpg img {
+        height: 250px;
+    }
+
+    .texto-rpg h2 {
+        font-size: 30px;
+    }
+    .banner-sobre {
+    padding: 40px 20px;
+    min-height: 350px;
+    background-position: 70% center;
+    }
+
+    .conteudo-banner h1 {
+    font-size: 36px;
+    }
+
+    .conteudo-banner p {
+        font-size: 20px;
+    }
+
+    .convite-participar {
+    padding: 50px 20px;
+    }
+
+    .conteudo-convite h2 {
+        font-size: 28px;
+    }
+
+    .conteudo-convite p {
+        font-size: 16px;
+    }
+
+    /* Rodapé no celular */
+
+    .rodape {
+        padding: 40px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .rodape .rodape-links {
+        align-items: flex-start;
+    }
+
 }
