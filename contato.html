@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa Aberta | Contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="js/contato.js" defer></script>
+</head>
+<body>
+    <header>
+    <a href="index.html">
+        <img src="img/Mesa_Aberta_Logo_Header.png" alt="Logo da ONG Mesa Aberta"
+        class="logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <a href="contato.html#participar" class="botao-participe">Participe
+
+    </a>
+ </header>
+    
+    <main>
+   
+
+<!-- Inicio do banner -->
+<section class="banner-contato">
+
+    <h1>Entre em Contato com a Guilda de Aventureiros</h1>
+
+    <p>
+        Toda grande aventura começa com uma escolha.
+        Preencha sua ficha e faça parte da Mesa Aberta!
+    </p>
+
+</section>
+<!-- Fim do banner -->
+
+
+<!-- Início da ficha -->
+<section class="secao-ficha" id="participar">
+
+    <div class="ficha-aventureiro">
+
+        <h2>Registro de Aventureiro</h2>
+
+        <p class="descricao-ficha">
+            Identifique-se para iniciar sua jornada!
+        </p>
+
+        <form id="form-contato">
+
+            <!-- Primeira parte da ficha -->
+            <fieldset class="grupo-ficha">
+
+                <legend>
+                    I - Identidade do Aventureiro
+                </legend>
+
+                <div class="campo">
+                    <label for="nome">
+                        Nome do aventureiro
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Seu nome completo"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">
+                        Correio arcano (e-mail)
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+            </fieldset>
+            <!-- Segunda parte da ficha -->
+<fieldset class="grupo-ficha">
+
+    <legend>
+        II - Escolha sua Jornada
+    </legend>
+
+    <p>Qual caminho deseja seguir, aventureiro?</p>
+
+    <div class="opcoes-jornada">
+
+        <label>
+            <input type="radio" name="jornada"
+                   value="participar" required>
+            Participar de uma aventura
+        </label>
+
+        <label>
+            <input type="radio" name="jornada"
+                   value="voluntario">
+            Tornar-me voluntário da guilda
+        </label>
+
+        <label>
+            <input type="radio" name="jornada"
+                   value="contato">
+            Enviar uma mensagem à guilda
+        </label>
+
+    </div>
+
+</fieldset>
+
+<!-- Terceira parte da ficha -->
+
+<fieldset class="grupo-ficha" id="grupo-projetos" hidden>
+
+    <legend> III - Escolha sua Aventura</legend>
+    
+    <div class="campo">
+        <label for="projeto">
+            Qual projeto deseja conhecer?
+        </label>
+
+        <select id="projeto" name="projeto">
+            <option value="">Escolha sua Aventura</option>
+            <option value="primeiro-dado">Primeiro Dado</option>
+            <option value="historias-em-cena">Histórias em Cena</option>
+            <option value="vozes-da-mesa">Vozes da Mesa</option>
+        </select>
+    </div>
+</fieldset>
+
+<!-- Campos para voluntários -->
+
+<fieldset class="grupo-ficha" id="grupo-voluntario" hidden>
+
+    <legend>III - Sua Classe na Guilda</legend>
+
+    <div class="campo">
+        <label for="funcao">
+            Como deseja ajudar?
+        </label>
+
+        <select id="funcao" name="funcao">
+            <option value="">Selecione sua função</option>
+            <option value="mestre">Mestre de RPG</option>
+            <option value="organizacao">Organização de eventos</option>
+            <option value="divulgacao">Divulgação e comunicação</option>
+            <option value="outros">Outras habilidades</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label for="disponibilidade">
+            Qual sua disponibilidade?
+        </label>
+
+        <select id="disponibilidade" name="disponibilidade">
+            <option value="">Selecione sua disponibilidade</option>
+            <option value="semana">Durante a semana</option>
+            <option value="fim-de-semana">Finais de semana</option>
+            <option value="flexivel">Horários flexíveis</option>
+        </select>
+    </div>
+
+</fieldset>
+
+<!-- Campos para contato -->
+<fieldset class="grupo-ficha" id="grupo-mensagem" hidden>
+
+    <legend>III - Mensagem à Guilda</legend>
+
+    <p>
+        Possui alguma dúvida, sugestão ou proposta?
+        Nossa guilda está pronta para ouvir você!
+    </p>
+
+    <div class="campo">
+
+        <label for="mensagem">
+            Seu pergaminho
+        </label>
+
+        <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Escreva sua mensagem para a guilda...">
+        </textarea>
+
+    </div>
+
+</fieldset>
+
+<!-- Botão de envio da ficha -->
+<button type="submit" class="botao-enviar">
+    Enviar Pergaminho
+</button>
+
+<!-- Mensagem de retorno -->
+<p id="mensagem-retorno" role="status"></p>
+
+</form>
+
+    </div>
+
+</section>
+
+<!-- Fim da ficha -->
+
+</main>
+ <footer class="rodape">
+
+    <div class="conteudo-rodape">
+
+        <!-- Identidade da ONG -->
+        <div class="rodape-identidade">
+
+            <img src="img/Mesa_Aberta_Logo_Header.png"
+                 alt="Logo da Mesa Aberta"
+                 class="logo-rodape">
+
+            <p>Histórias que aproximam...</p>
+
+            <p>
+                Conectando pessoas através
+                do RPG de mesa.
+            </p>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="rodape-navegacao">
+
+            <h3>Navegação</h3>
+
+            <nav class="rodape-links" aria-label="Navegação do rodapé">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <!-- Parte inferior -->
+    <div class="rodape-inferior">
+        <p>© 2026 Mesa Aberta. Projeto acadêmico.</p>
+    </div>
+
+</footer>
+</body>
+</html>
