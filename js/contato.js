@@ -1,93 +1,70 @@
-/* Identificando os elementos do HTML */
+/* =======================================================
+   MESA ABERTA - PROJETO INTEGRADOR (VERSAO 2)
+   Funcionalidade 1: validar o formulario de contato.
+   Funcionalidade 2: mostrar/ocultar orientacoes da ONG.
+   Sem envio real de mensagens ou armazenamento de dados.
+   ======================================================= */
 
-const opcoesJornada = document.querySelectorAll(
-    'input[name="jornada"]'
-);
-
-const grupoProjetos = document.getElementById(
-    "grupo-projetos"
-);
-
-const grupoVoluntario = document.getElementById("grupo-voluntario");
-
-const grupoMensagem = document.getElementById("grupo-mensagem");
-
-/* Observando a escolha do visitante */
-
-opcoesJornada.forEach(function(opcao) {
-
-    opcao.addEventListener("change", function() {
-
-        if (opcao.checked) {
-
-            grupoProjetos.hidden = opcao.value !== "participar";
-
-            grupoVoluntario.hidden = opcao.value !== "voluntario";
-
-            grupoMensagem.hidden = opcao.value !== "contato";
-
-        }
-
-    });
-
-});
-
-/* ---------------- Envio do Formulário ---------------- */
-
-// Encontrando o formulário
+// Selecionamos os elementos da pagina pelos seus IDs.
 const formulario = document.getElementById("form-contato");
-
-// Encontrando onde mostraremos a resposta
+const campoNome = document.getElementById("nome");
+const campoEmail = document.getElementById("email");
+const campoAssunto = document.getElementById("assunto");
+const campoMensagem = document.getElementById("mensagem");
 const mensagemRetorno = document.getElementById("mensagem-retorno");
 
-// Detectando quando o visitante envia a ficha
-formulario.addEventListener("submit", function(evento) {
+const botaoOrientacoes = document.getElementById("botao-orientacoes");
+const painelOrientacoes = document.getElementById("painel-orientacoes");
 
-    // Impede o envio padrão da página
+// FUNCIONALIDADE 1 - Validar os quatro campos do formulario.
+function validarFormulario(evento) {
+    // Impede que o navegador tente enviar/recarregar a pagina.
     evento.preventDefault();
 
-    // Descobre qual jornada foi escolhida
-    const jornada = document.querySelector(
-        'input[name="jornada"]:checked'
-    ).value;
+    // Lemos os valores e retiramos espacos desnecessarios das pontas.
+    const nome = campoNome.value.trim();
+    const email = campoEmail.value.trim();
+    const assunto = campoAssunto.value.trim();
+    const mensagem = campoMensagem.value.trim();
 
-    // Confere o campo correspondente à jornada
-    let campoObrigatorio;
-
-    if (jornada === "participar") {
-        campoObrigatorio = document.getElementById("projeto");
-    } else if (jornada === "voluntario") {
-        campoObrigatorio = document.getElementById("funcao");
-
-        const disponibilidade = document.getElementById("disponibilidade");
-
-        if (!disponibilidade.value) {
-            disponibilidade.focus();
-            mensagemRetorno.textContent = "Escolha sua disponibilidade!";
-            return;
-        }
-
+    // As condicoes exibem o primeiro problema encontrado.
+    if (nome.length < 3) {
+        mensagemRetorno.textContent = "Informe um nome com pelo menos 3 caracteres.";
+        mensagemRetorno.className = "mensagem-erro";
+        campoNome.focus();
+    } else if (email === "" || !campoEmail.checkValidity()) {
+        mensagemRetorno.textContent = "Informe um e-mail valido, como aventureiro@exemplo.com.";
+        mensagemRetorno.className = "mensagem-erro";
+        campoEmail.focus();
+    } else if (assunto === "") {
+        mensagemRetorno.textContent = "Selecione um assunto para sua mensagem.";
+        mensagemRetorno.className = "mensagem-erro";
+        campoAssunto.focus();
+    } else if (mensagem.length < 10) {
+        mensagemRetorno.textContent = "Escreva uma mensagem com pelo menos 10 caracteres.";
+        mensagemRetorno.className = "mensagem-erro";
+        campoMensagem.focus();
     } else {
-        campoObrigatorio = document.getElementById("mensagem");
+        // Apenas demonstracao: nao ha servidor nem envio de e-mail.
+        mensagemRetorno.textContent =
+            "Pergaminho validado! Esta e uma simulacao: nenhum e-mail foi enviado e nenhum dado foi armazenado.";
+        mensagemRetorno.className = "mensagem-sucesso";
     }
+}
 
-    if (!campoObrigatorio.value.trim()) {
-        campoObrigatorio.focus();
-        mensagemRetorno.textContent = "Complete os campos da sua jornada!";
-        return;
+// FUNCIONALIDADE 2 - Mostrar ou ocultar orientacoes ao clicar.
+function alternarOrientacoes() {
+    if (painelOrientacoes.hidden) {
+        painelOrientacoes.hidden = false;
+        botaoOrientacoes.textContent = "Ocultar orientacoes da guilda";
+        botaoOrientacoes.setAttribute("aria-expanded", "true");
+    } else {
+        painelOrientacoes.hidden = true;
+        botaoOrientacoes.textContent = "Mostrar orientacoes da guilda";
+        botaoOrientacoes.setAttribute("aria-expanded", "false");
     }
+}
 
-    // Exibe a confirmação de teste
-    mensagemRetorno.textContent =
-        "Pergaminho validado! Sua ficha está pronta para envio à guilda.";
-
-        /* Limpa os campos do formulário */
-formulario.reset();
-
-/* Esconde as seções das jornadas */
-grupoProjetos.hidden = true;
-grupoVoluntario.hidden = true;
-grupoMensagem.hidden = true;
-
-});
-
+// Registramos os dois eventos obrigatorios do projeto.
+formulario.addEventListener("submit", validarFormulario);
+botaoOrientacoes.addEventListener("click", alternarOrientacoes);

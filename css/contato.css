@@ -1,13 +1,9 @@
 /* ==========================================================
-   MESA ABERTA — PÁGINA CONTATO
-   Ordem: Global > Cabeçalho > Banner > Ficha > Rodapé > Mobile
+   MESA ABERTA - CONTATO | CSS COMPATIVEL COM O PROJETO V2
    ========================================================== */
 
-/* ---------------- 1. Formatação global ---------------- */
-* {
-    box-sizing: border-box;
-}
-
+/* 1. Global */
+* { box-sizing: border-box; }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +11,7 @@ body {
     color: #24213D;
 }
 
-/* ---------------- 2. Cabeçalho ---------------- */
+/* 2. Cabecalho */
 header {
     background-color: #24213D;
     display: flex;
@@ -24,28 +20,14 @@ header {
     padding: 8px 32px;
     border-bottom: solid #1B1A30;
 }
-
-.logo {
-    max-width: 160px;
-    height: auto;
-}
-
-header nav {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-header nav a {
+.logo { max-width: 160px; height: auto; }
+header nav { display: flex; gap: 30px; align-items: center; }
+header nav a, .rodape-links a {
     color: #F7F3EA;
     text-decoration: none;
     font-size: 16px;
 }
-
-header nav a:hover {
-    color: #E8BD70;
-}
-
+header nav a:hover, .rodape-links a:hover { color: #E8BD70; }
 .botao-participe {
     background-color: #E8BD70;
     color: #24213D;
@@ -55,20 +37,17 @@ header nav a:hover {
     font-weight: bold;
     transition: background-color 0.3s;
 }
-
-.botao-participe:hover {
-    background-color: #F5D391;
+.botao-participe:hover { background-color: #F5D391; }
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #E8BD70;
+    outline-offset: 3px;
 }
 
-/* ---------------- 3. Banner Contato ---------------- */
+/* 3. Banner */
 .banner-contato {
     background-color: #24213D;
     background-image:
-        linear-gradient(
-            to right,
-            rgba(36, 33, 61, 0.95),
-            rgba(36, 33, 61, 0.10)
-        ),
+        linear-gradient(to right, rgba(36,33,61,0.95), rgba(36,33,61,0.10)),
         url("../img/banner_contato.png");
     background-size: cover;
     background-position: center;
@@ -80,14 +59,12 @@ header nav a:hover {
     align-items: flex-start;
     justify-content: center;
 }
-
 .banner-contato h1 {
     color: #E8BD70;
     font-family: "Times New Roman", serif;
     font-size: 43px;
     max-width: 550px;
 }
-
 .banner-contato p {
     color: #F7F3EA;
     font-family: "Times New Roman", serif;
@@ -96,12 +73,38 @@ header nav a:hover {
     line-height: 1.6;
 }
 
-/* ---------------- 4. Ficha do Aventureiro ---------------- */
-.secao-ficha {
+/* 4. Interacao adicional - orientacoes */
+.secao-orientacoes {
     background-color: #EEE9DF;
-    padding: 70px 32px;
+    padding: 45px 32px 10px;
+    text-align: center;
 }
+.conteudo-orientacoes { max-width: 800px; margin: 0 auto; }
+.conteudo-orientacoes h2 { font-size: 26px; color: #24213D; }
+.conteudo-orientacoes p { color: #4A4558; line-height: 1.6; }
+#botao-orientacoes {
+    background-color: #24213D;
+    color: #F7F3EA;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#botao-orientacoes:hover { background-color: #7757A8; }
+.painel-orientacoes {
+    background-color: #F7F3EA;
+    border: 1px solid #C8B68F;
+    border-radius: 10px;
+    padding: 14px 24px;
+    margin-top: 20px;
+    text-align: left;
+}
+.painel-orientacoes[hidden] { display: none; }
 
+/* 5. Ficha do aventureiro */
+.secao-ficha { background-color: #EEE9DF; padding: 40px 32px 70px; }
 .ficha-aventureiro {
     background-color: #F7F3EA;
     width: 100%;
@@ -111,20 +114,12 @@ header nav a:hover {
     border: 2px solid #7757A8;
     border-radius: 12px;
 }
-
 .ficha-aventureiro h2 {
     color: #24213D;
     font-size: 32px;
     text-align: center;
 }
-
-.descricao-ficha {
-    color: #4A4558;
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-/* Grupos e títulos dos grupos */
+.descricao-ficha { color: #4A4558; text-align: center; margin-bottom: 35px; }
 .grupo-ficha {
     min-width: 0;
     border: 1px solid #C8B68F;
@@ -132,7 +127,6 @@ header nav a:hover {
     padding: 25px;
     margin-bottom: 25px;
 }
-
 .grupo-ficha legend {
     color: #7757A8;
     font-size: 20px;
@@ -140,28 +134,9 @@ header nav a:hover {
     padding: 0 10px;
     max-width: 100%;
 }
-
-/* Elementos com hidden são controlados pelo JavaScript */
-.grupo-ficha[hidden] {
-    display: none;
-}
-
-/* Campos de texto, seleção e mensagem */
-.campo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.campo label {
-    color: #24213D;
-    font-weight: bold;
-}
-
-.campo input,
-.campo select,
-.campo textarea {
+.campo { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.campo label { font-weight: bold; color: #24213D; }
+.campo input, .campo select, .campo textarea {
     width: 100%;
     min-width: 0;
     padding: 12px;
@@ -171,36 +146,12 @@ header nav a:hover {
     font-size: 16px;
     background-color: #FFFFFF;
 }
-
-.campo textarea {
-    resize: vertical;
-}
-
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
+.campo textarea { resize: vertical; }
+.campo input:focus, .campo select:focus, .campo textarea:focus {
     outline: 2px solid #7757A8;
     outline-offset: 2px;
 }
-
-/* Opções de jornada (botões de rádio) */
-.opcoes-jornada {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.opcoes-jornada label {
-    color: #24213D;
-    cursor: pointer;
-}
-
-.opcoes-jornada input {
-    accent-color: #7757A8;
-    margin-right: 10px;
-}
-
-/* Enviar pergaminho */
+.aviso-simulacao { color: #4A4558; font-size: 14px; line-height: 1.5; }
 .botao-enviar {
     display: block;
     width: 100%;
@@ -214,25 +165,18 @@ header nav a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
-.botao-enviar:hover {
-    background-color: #614689;
-}
-
+.botao-enviar:hover { background-color: #614689; }
 #mensagem-retorno {
-    color: #24213D;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
+    line-height: 1.5;
 }
+.mensagem-erro { color: #A12B2B; }
+.mensagem-sucesso { color: #216337; }
 
-/* ---------------- 5. Rodapé ---------------- */
-.rodape {
-    background-color: #1B1A30;
-    color: #F7F3EA;
-    padding: 50px 40px 0;
-}
-
+/* 6. Rodape */
+.rodape { background-color: #1B1A30; color: #F7F3EA; padding: 50px 40px 0; }
 .conteudo-rodape {
     max-width: 1200px;
     margin: 0 auto;
@@ -241,7 +185,6 @@ header nav a:hover {
     gap: 40px;
     padding-bottom: 40px;
 }
-
 .logo-rodape {
     max-width: 180px;
     height: auto;
@@ -249,126 +192,34 @@ header nav a:hover {
     padding: 8px;
     border-radius: 8px;
 }
-
-.rodape-identidade p {
-    color: #C6C0D3;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.rodape-navegacao h3 {
-    color: #E8BD70;
-    font-size: 20px;
-}
-
+.rodape-identidade p { color: #C6C0D3; font-size: 15px; line-height: 1.6; }
+.rodape-navegacao h3 { color: #E8BD70; font-size: 20px; }
 .rodape .rodape-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
+.rodape-links a { font-size: 15px; }
+.rodape-inferior { border-top: 1px solid #7757A8; text-align: center; padding: 20px 0; }
+.rodape-inferior p { color: #C6C0D3; font-size: 13px; margin: 0; }
 
-.rodape-links a {
-    color: #F7F3EA;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.rodape-links a:hover {
-    color: #E8BD70;
-}
-
-.rodape-inferior {
-    border-top: 1px solid #7757A8;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.rodape-inferior p {
-    color: #C6C0D3;
-    font-size: 13px;
-    margin: 0;
-}
-
-/* ---------------- 6. Tablets e janelas menores ---------------- */
+/* 7. Telas menores */
 @media (max-width: 960px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    header nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .botao-participe {
-        text-align: center;
-    }
+    header { flex-direction: column; gap: 15px; padding: 15px 20px; }
+    header nav { justify-content: center; flex-wrap: wrap; gap: 15px; }
+    .botao-participe { text-align: center; }
 }
-
-/* ---------------- 7. Celulares ---------------- */
 @media (max-width: 768px) {
-    .banner-contato {
-        padding: 40px 20px;
-        min-height: 320px;
-        background-position: 70% center;
-    }
-
-    .banner-contato h1 {
-        font-size: 32px;
-    }
-
-    .banner-contato p {
-        font-size: 16px;
-    }
-
-    .secao-ficha {
-        padding: 40px 16px;
-    }
-
-    .ficha-aventureiro {
-        padding: 20px 16px;
-    }
-
-    .ficha-aventureiro h2 {
-        font-size: 26px;
-    }
-
-    .grupo-ficha {
-        padding: 16px;
-    }
-
-    .grupo-ficha legend {
-        font-size: 17px;
-    }
-
-    .rodape {
-        padding: 40px 20px 0;
-    }
-
-    .conteudo-rodape {
-        flex-direction: column;
-        gap: 25px;
-    }
-}
-/* Prevenção de transbordamento horizontal */
-
-main,
-form,
-.ficha-aventureiro {
-    min-width: 0;
-}
-
-.grupo-ficha {
-    width: 100%;
-    min-width: 0;
-}
-
-.campo input,
-.campo select,
-.campo textarea {
-    max-width: 100%;
+    .banner-contato { padding: 40px 20px; min-height: 320px; background-position: 70% center; }
+    .banner-contato h1 { font-size: 32px; }
+    .banner-contato p { font-size: 16px; }
+    .secao-orientacoes { padding: 40px 16px 10px; }
+    .secao-ficha { padding: 30px 16px 40px; }
+    .ficha-aventureiro { padding: 20px 16px; }
+    .ficha-aventureiro h2 { font-size: 26px; }
+    .grupo-ficha { padding: 16px; }
+    .grupo-ficha legend { font-size: 17px; }
+    .rodape { padding: 40px 20px 0; }
+    .conteudo-rodape { flex-direction: column; gap: 25px; }
 }
